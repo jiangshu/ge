@@ -1,0 +1,37 @@
+
+.project_list{
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:50px;
+    padding: 0 50px 0 50px;
+}
+
+.project_modify{
+    position:absolute;
+    width:500px;
+    height:400px;
+    background: #fff;
+    border-radius: 10px;
+    left:200px;
+    top:200px;
+    padding-top:30px;
+    -webkit-box-shadow:  5px 5px 15px #969696;
+    -moz-box-shadow:  5px 5px 15px #969696;
+    shadow:  5px 5px 15px #969696;
+}
+
+input{
+    height:25px;
+    border-radius: 3px;
+    border: 1px solid #24a5ff;
+    font-size:14px;
+    width:250px;
+}
+
+textarea{
+    border-radius: 5px;
+    border: 1px solid #24a5ff;
+    color: #8b8b8b;
+    width:250px;
+    height:40px;
+}

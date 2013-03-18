@@ -1,0 +1,128 @@
+html,body{
+    margin:0;
+    min-height:100%;
+    background:url(./body.png);
+    font-size:12px;
+}
+
+.header{
+    /*margin-left:70px;*/
+    /*margin-right: 70px;*/
+    height:70px;
+    /*line-height: 100px;*/
+    /*padding-left:100px;*/
+    /*filter:alpha(Opacity=80);*/
+    /*-moz-opacity:0.5;*/
+    background-color:#000;
+
+}
+
+.header .back{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    /*opacity: 0.3;*/
+    background-color:#000;
+}
+
+.header .logo{
+    font-family:Helvetica;
+    color: #f6f6f6;
+    font-size:50px;
+    font-weight:bold;
+    text-shadow: 5px 5px 5px #aaa;
+    width:200px;
+    float:left;
+    text-align: center;
+}
+
+.header .nav{
+    height:30px;
+    margin-top: 40px;
+    max-width:800px;
+    margin-right:100px;
+    float:right;
+    text-align: center;
+}
+
+.header .nav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+
+.header .nav ul li{
+    display: inline-block;
+    float:right;
+    width:100px;
+    height:100%;
+    background: #1d85f8;
+    line-height: 30px;
+    text-align: center;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    margin-right:2px;
+    font-size:15px;
+    color:#fff;
+    font-weight:bold;
+}
+
+.header .nav ul li a{
+    color:#fff;
+    text-decoration: none;
+}
+
+
+.header .nav ul li:hover{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#1558aa),to(#2185ff));
+    background-image:-moz-linear-gradient(#1558aa,#2185ff);
+}
+
+
+.body{
+    margin-left: auto;
+    margin-right: auto;
+    width:1000px;
+    margin-top:20px;
+    background: #ffffff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    min-height:100%;
+    padding-top:50px;
+    -webkit-box-shadow: inset 0px 0px 5px #aaa;
+    -moz-box-shadow: inset 0px 0px 5px #aaa;
+    shadow: inset 0px 0px 5px #aaa;
+}
+
+.body .info{
+    width:100%;
+    height:300px;
+}
+
+/*
+ *button
+ */
+
+.ge_button{
+    width:100px;
+    height:30px;
+    padding: 0 8px 0 8px;
+    background: #0c08ff;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    color:#fff;
+    font-size:14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#2185ff),to(#1558aa));
+    background-image:-moz-linear-gradient(#2185ff,#1558aa);
+}
+
+.ge_button:hover{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#1558aa),to(#2185ff));
+    background-image:-moz-linear-gradient(#1558aa,#2185ff);
+    background: #1b5dff;
+}
