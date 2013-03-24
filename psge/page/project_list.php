@@ -1,5 +1,7 @@
 <?php
 include_once("../control/ProjectListController.php");
+$projectList = new ProjectList();
+$projectList->doAction();
 ?>
 <html>
 <head>
@@ -8,7 +10,9 @@ include_once("../control/ProjectListController.php");
     <link rel="stylesheet" type="text/css" href="../static/page/project_list/project_list.css"/>
     <script type="text/javascript" src="../static/lib/jquery-1.8.2.js"></script>
     <script type="text/javascript" src="../static/common/common.js"></script>
+    <script type="text/javascript" src="../static/lib/template/template.js"></script>
     <script type="text/javascript" src="../static/page/project_list/project_list.js"></script>
+
 </head>
 <body>
 <?php
@@ -16,58 +20,82 @@ include_once("../control/ProjectListController.php");
 ?>
 
    <div class="project_list">
-        <table align="center" cellpadding="3" width="100%" border="1" style=" border-collapse:collapse;">
+        <table align="center" cellpadding="3" width="100%" border="1" style=" border-collapse:collapse;table-layout: fixed;word-break: break-all;">
             <tr bgcolor="#2185ff" style="color:#fff">
-                <td>项目名称</td>
-                <td>TRACE空间</td>
-                <td>TRACE模块</td>
-                <td>报告收件人</td>
-                <td>报告抄送组</td>
-                <td>查看</td>
-                <td>修改</td>
+                <td width="10%">项目名称</td>
+                <td width="15%">TRACE空间</td>
+                <td width="20%">TRACE模块</td>
+                <td width="20%">报告收件人</td>
+                <td width="20%">报告抄送组</td>
+                <td width="5%">删除</td>
+                <td width="5%">查看</td>
+                <td width="5%">修改</td>
             </tr>
-            <?php foreach($project_list as $project=>$data){?>
+            <?php foreach($projectList->getList() as $project=>$data){?>
                 <tr>
                     <td><?php echo $project?></td>
                     <td><?php echo $data["trace"]?></td>
                     <td><?php echo $data["module"]?></td>
-                    <td><?php echo $data["mail"][0]?></td>
-                    <td><?php echo $data["mail"][0]?></td>
-                    <td><?php echo "查看"?></td>
-                    <td><?php echo "修改"?></td>
+                    <td><?php echo $data["mailto"]?></td>
+                    <td><?php echo $data["mailgroup"]?></td>
+                    <td><div class="list_button delete"><?php echo $data["delete"]?></div></td>
+                    <td><div class="list_button browser"><?php echo "查看"?></div></td>
+                    <td><div class="list_button modify"><?php echo "修改"?></div></td>
                 </tr>
             <?php }?>
         </table>
    </div>
 
+<div class="mask"></div>
 
-<div class="project_modify">
-    <table align="center" width="400px" cellpadding="5px">
-        <tr><td width="25%"> 项目名称：</td><td><input id="project_name" name="project_name" class="name" type="text"/></td></tr>
-        <tr><td> 最新版本：</td><td><input id="version" name="version" class="version" type="text" value="1.0.0.0"/></td></tr
-        <tr><td> 项目简介：</td><td><textarea name="info" id="info"></textarea></td></tr>
-        <tr><td> TRACE空间：</td><td><input type="text" id="space" name="space"  value="PUBLICGE"></td></tr>
-        <tr><td> TRACE模块：</td><td><input type="text" name="module" id="module"   value="public/ge/gaea"></td></tr>
-        <tr><td> 邮件组：</td><td>
-                <table>
-                    <tr><td>收件人：</td></tr>
-                    <tr><td><input type="text" name="mailto"></td></tr>
-                    <tr><td>抄送：</td></tr>
-                    <tr><td><input type="text" name="mailgroup"></td></tr>
-                </table>
-            </td>
-        </tr>
-        <tr><td></td><td align="right"><div class="ge_button">确定</div></td></tr>
-    </table>
+<div class="browser_content">
+    <h1>显示进度 和bug详细信息</h1>
+    <h2>正在开发中。。。</h2>
 </div>
 
+<div>
+    <div></div>
+    <div></div>
+</div>
 
 <script type="text/javascript">
-   var project_list = '<?php echo json_encode($project_list);?>';
+   var project_list,modify_tpl,tpl_fun;
+   project_list = '<?php echo json_encode($projectList->getSimpleList())?>';
    project_list = JSON.parse(project_list);
+   modify_tpl = '<?php echo $projectList->getProjectTpl() ?>';
+   tpl_fun = baidu.template(modify_tpl);
+
+   $(".modify").click(function(){
+       var width = $(window).width(),
+           height = $(window).height();
+       $(".mask").show();
+       $project_name = $(this).parent().parent().children().eq(0).html();
+       $project_info = project_list[$project_name];
+       $project_data = {
+           project:$project_name,
+           version:$project_info["version"],
+           module: $project_info["module"],
+           new_version: $project_info["new_version"],
+           trace: $project_info["trace"],
+           mailto: $project_info["mailto"],
+           mailgroup: $project_info["mailgroup"]
+       };
+       $(tpl_fun($project_data)).appendTo("body").css("top",(height-450)/2).css("left",(width-600)/2).show(400);
+       $("#close").click(function(){
+           $(".project_modify").remove();
+           $(".mask").hide();
+       })
+   });
+
+    $(".browser").click(function(){
+        var width = $(window).width(),
+            height = $(window).height();
+         $(".browser_content").css("height",height-80).css("width",width-70).show().click(function(){
+             $(this).hide();
+         });
+    });
 
 
-   console.log(project_list["fis-pc"]);
 </script>
 
 </body>

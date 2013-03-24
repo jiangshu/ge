@@ -1,4 +1,3 @@
-
 .project_list{
     margin-right:auto;
     margin-left:auto;
@@ -7,14 +6,15 @@
 }
 
 .project_modify{
+    display: none;
     position:absolute;
-    width:500px;
-    height:400px;
+    width:600px;
+    height:450px;
     background: #fff;
     border-radius: 10px;
     left:200px;
     top:200px;
-    padding-top:30px;
+    padding-top:10px;
     -webkit-box-shadow:  5px 5px 15px #969696;
     -moz-box-shadow:  5px 5px 15px #969696;
     shadow:  5px 5px 15px #969696;
@@ -25,13 +25,62 @@ input{
     border-radius: 3px;
     border: 1px solid #24a5ff;
     font-size:14px;
-    width:250px;
+    width:350px;
 }
 
 textarea{
     border-radius: 5px;
     border: 1px solid #24a5ff;
-    color: #8b8b8b;
-    width:250px;
+    width:350px;
     height:40px;
+}
+
+.list_button{
+    display: inline-block;
+    padding: 0 10px 0 10px;
+    height:24px;
+    padding: 0 8px 0 8px;
+    background: #0c08ff;
+    line-height: 24px;
+    text-align: center;
+    border-radius: 5px;
+    color:#fff;
+    font-size:13px;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#2185ff),to(#1558aa));
+    background-image:-moz-linear-gradient(#2185ff,#1558aa);
+}
+
+.list_button:hover{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#1558aa),to(#2185ff));
+    background-image:-moz-linear-gradient(#1558aa,#2185ff);
+    background: #1b5dff;
+}
+
+.list_button a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.mask{
+    width:100%;
+    height:100%;
+    background: #000;
+    position:absolute;
+    top:0;
+    left:0;
+    display: none;
+    filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+    -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+    opacity:0.5;/*其他，透明度50%*/
+}
+
+.browser_content{
+    width:100%;
+    height:100%;
+    position:absolute;
+    left:70px;
+    top:80px;
+    background: #fff;
+    display: none;
 }

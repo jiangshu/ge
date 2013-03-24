@@ -1,12 +1,5 @@
 <?php
-
 include_once str_replace("\\","/",dirname(__FILE__)).("/../env.php");
-
-$projects  = array(
-    "fis-pc",
-    "fis-mobile",
-    "fis-pc2",
-    "fis-webapp",
-    "fis-core",
-    "fis-basic"
-);
+include_once BASE_SRC."model/ProjectListModel.class.php";
+$projectList = new ProjectListM();
+$projects = $projectList ->getProjects();

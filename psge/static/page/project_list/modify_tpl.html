@@ -1,0 +1,23 @@
+<div class="project_modify">
+    <form action="#" method="post">
+        <div style="text-align:right;font-size:16px;color:red;padding-right:20px;margin-bottom: 20px;cursor:pointer" id="close">关闭</div>
+        <table align="center" width="500px" cellpadding="5px">
+            <tr><td width="25%"> 项目名称：</td><td><input id="project_name" name="project_name" class="name" type="text" value=<#=project#>></td></tr>
+            <tr><td> 最新版本：</td><td><input id="version" name="version" class="version" type="text" value=<#=new_version#>></td></tr>
+            <tr><td> 项目简介：</td><td><textarea name="info" id="info"><#=project#></textarea></td></tr>
+            <tr><td> TRACE空间：</td><td><input type="text" id="space" name="space"  value=<#=trace#>></td></tr>
+            <tr><td> TRACE模块：</td><td><input type="text" name="module" id="module" value=<#=module#>></td></tr>
+            <tr><td> 邮件组：</td><td>
+                <table>
+                    <tr><td>收件人：</td></tr>
+                    <tr><td><input type="text" name="mailto" value=<#=mailto#>></td></tr>
+                    <tr><td>抄送：</td></tr>
+                    <tr><td><input type="text" name="mailgroup" value=<#=mailgroup#>></td></tr>
+                </table>
+            </td>
+            </tr>
+            <tr><td></td><td align="right"><input type="submit" class="ge_button" value="确定"></td></tr>
+        </table>
+        <input type="hidden" value="modify" name="action"/>
+    </form>
+</div>

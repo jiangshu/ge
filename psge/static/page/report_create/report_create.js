@@ -73,4 +73,17 @@ $(function(){
         }
     });
 
+    $(".report_create #submit").click(function(){
+         if($(".report_create #version").attr("value") == ""){
+            Ge.tip($(".report_create #version"),"版本号不能为空");
+             $(".report_create #version").one("mousemove",function(){
+                 $("#tip").remove();
+             });
+        }else{
+            return true;
+        }
+        return false;
+    });
+
+
 });

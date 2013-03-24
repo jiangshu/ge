@@ -11,6 +11,7 @@ include_once str_replace("\\","/",dirname(__FILE__))."/parse/ParseCov.php";
 include_once str_replace("\\","/",dirname(__FILE__))."/parse/ParseDiff.php";
 include_once str_replace("\\","/",dirname(__FILE__))."/TraceModel.class.php";
 include_once str_replace("\\","/",dirname(__FILE__))."/../util/File.class.php";
+include_once BASE_SRC."model/ProjectListModel.class.php";
 
 class ReportData{
     private $reportInfo;
@@ -22,6 +23,8 @@ class ReportData{
         $this->project = $project;
         $this->version = $version;
         $this->result = $reportInfo;
+        $projectList = new ProjectListM();
+        $this->projectInfo = $projectList->getProject($project);
     }
 
     /*

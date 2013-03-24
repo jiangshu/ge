@@ -16,48 +16,33 @@
 <?php $smarty->display("widget/header/header.tpl")?>
 
 <div class="body">
+    <div class="page_title">添加项目</div>
     <div class="project_add">
         <form action="../control/ProjectAddController.php" method="post" id="project_add" >
             <table align="center" width="500px" cellpadding="5px">
                 <tr >
-                    <td width="25%">
-                        项目名称：
-                    </td>
-                    <td>
-                        <input id="project_name" name="project_name" class="name" type="text"/>
-                    </td>
+                    <td width="25%">项目名称：</td>
+                    <td><input id="project_name" name="project_name" class="name" type="text"/></td>
                 </tr>
                 <tr>
-                    <td>
-                        最新版本：
-                    </td>
-                    <td>
-                        <input id="version" name="version" class="version" type="text" value="1.0.0.0"/>
-                    </td>
+                    <td>最新版本：</td>
+                    <td><input id="version" name="version" class="version" type="text" value="1.0.0.0"/></td>
                 </tr>
                 <tr>
-                    <td>
-                        项目简介：
-                    </td>
-                    <td>
-                        <textarea name="info" id="info"></textarea>
-                    </td>
+                    <td>项目简介：</td>
+                    <td><textarea name="info" id="info"></textarea></td>
                 </tr>
                 <tr>
-                    <td>
-                        TRACE空间：
-                    </td>
-                    <td>
-                        <input type="text" id="space" name="space"  value="PUBLICGE">
-                    </td>
+                    <td>TRACE空间：</td>
+                    <td><input type="text" id="space" name="space"  value="PUBLICGE"></td>
                 </tr>
                 <tr>
-                    <td>
-                        TRACE模块：
-                    </td>
-                    <td>
-                        <input type="text" name="module" id="module"   value="public/ge/gaea">
-                    </td>
+                    <td>TRACE模块：</td>
+                    <td><input type="text" name="module" id="module"   value="public/ge/gaea"></td>
+                </tr>
+                <tr>
+                    <td>CI机器IP：</td>
+                    <td><input type="text" name="CiIp" id="CiIp"   value="10.48.30.87"></td>
                 </tr>
                 <tr>
                     <td>
@@ -65,18 +50,10 @@
                     </td>
                     <td>
                         <table>
-                            <tr>
-                                <td>收件人：</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" name="mailto"></td>
-                            </tr>
-                            <tr>
-                                <td>抄送：</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" name="mailgroup"></td>
-                            </tr>
+                            <tr><td>收件人：</td></tr>
+                            <tr><td><input type="text" name="mailto" id="mailTo" class="mail"></td></tr>
+                            <tr><td>抄送：</td></tr>
+                            <tr><td><input type="text" name="mailgroup" id="mailGroup" class="mail"></td></tr>
                         </table>
                     </td>
                 </tr>

@@ -6,83 +6,84 @@
       0 => 
       array (
         'module' => 'common',
-        'new' => 28626,
-        'old' => 28661,
-        'change' => -0.12,
+        'new' => 29570,
+        'old' => 29130,
+        'change' => 1.51,
       ),
       1 => 
       array (
         'module' => 'album',
-        'new' => 11966,
-        'old' => 11819,
-        'change' => 1.24,
+        'new' => 11964,
+        'old' => 11864,
+        'change' => 0.84,
       ),
       2 => 
       array (
         'module' => 'favtoolbar',
-        'new' => 10997,
-        'old' => 11180,
-        'change' => -1.64,
+        'new' => 11000,
+        'old' => 10964,
+        'change' => 0.33,
       ),
       3 => 
       array (
         'module' => 'home',
-        'new' => 3228,
-        'old' => 3238,
-        'change' => -0.31,
+        'new' => 3175,
+        'old' => 3195,
+        'change' => -0.63,
       ),
       4 => 
       array (
         'module' => 'manage',
-        'new' => 9601,
-        'old' => 9634,
-        'change' => -0.34,
+        'new' => 9713,
+        'old' => 9536,
+        'change' => 1.86,
       ),
       5 => 
       array (
         'module' => 'message',
-        'new' => 12475,
-        'old' => 12567,
-        'change' => -0.73,
+        'new' => 12508,
+        'old' => 12575,
+        'change' => -0.53,
       ),
       6 => 
       array (
         'module' => 'picture',
-        'new' => 27929,
-        'old' => 28855,
-        'change' => -3.21,
+        'new' => 27950,
+        'old' => 29034,
+        'change' => -3.73,
       ),
       7 => 
       array (
         'module' => 'tag',
-        'new' => 5115,
-        'old' => 5112,
-        'change' => 0.06,
+        'new' => 5090,
+        'old' => 5188,
+        'change' => -1.89,
       ),
       8 => 
       array (
         'module' => 'thirduser',
-        'new' => 11259,
-        'old' => 11236,
-        'change' => 0.2,
+        'new' => 11292,
+        'old' => 11149,
+        'change' => 1.28,
       ),
       9 => 
       array (
         'module' => 'timeline',
-        'new' => 13328,
-        'old' => 13332,
-        'change' => -0.03,
+        'new' => 13319,
+        'old' => 13342,
+        'change' => -0.17,
       ),
       10 => 
       array (
         'module' => 'user',
-        'new' => 12537,
-        'old' => 12476,
-        'change' => 0.49,
+        'new' => 12495,
+        'old' => 12652,
+        'change' => -1.24,
       ),
     ),
   ),
   'fis-moible' => 
   array (
   ),
+  'fis-basic' => NULL,
 );

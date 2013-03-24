@@ -1,30 +1,56 @@
 <?php return array (
-  'fis-pc2' => 
+  'fis-basic' => 
   array (
-    'trace' => 'PUBLICGE',
-    'module' => 'public/ge/gaea/fis-pc2',
     'new_version' => '1.0.0.0',
-    'mail' => 'aa',
+    'info' => 'fis-basic',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/fis-basic',
+    'mailto' => 'leizhixing@baidu.com',
+    'mailgroup' => '',
   ),
-  'fis-pc' => 
+  'fis-core' => 
   array (
-    'trace' => 'PUBLICGE',
-    'module' => 'public/ge/gaea',
     'new_version' => '1.0.0.0',
-    'mail' => 'aa',
+    'info' => 'fis-core',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/fis-core',
+    'mailto' => 'leizhixing@baidu.com',
+    'mailgroup' => '',
   ),
   'fis-mobile' => 
   array (
-    'trace' => 'PUBLICGE',
-    'module' => 'public/ge/gaea',
     'new_version' => '1.0.0.0',
-    'mail' => 'aa',
+    'info' => 'fis-mobile',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/fis-phone',
+    'mailto' => 'shenlixia01@baidu.com',
+    'mailgroup' => 'ge-qa@baidu.com',
   ),
   'fis-webapp' => 
   array (
-    'trace' => 'PUBLICGE',
-    'module' => 'public/ge/gaea',
     'new_version' => '1.0.0.0',
-    'mail' => 'fis-webapp',
+    'info' => 'fis-webapp',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/webapp',
+    'mailto' => 'leizhixing@baidu.com',
+    'mailgroup' => '',
+  ),
+  'fis-pc2' => 
+  array (
+    'new_version' => '1.0.0.0',
+    'info' => 'fis-pc2',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/pc2',
+    'mailto' => 'shenlixia01@baidu.com',
+    'mailgroup' => 'ge-qa@baidu.com',
+  ),
+  'fis-pc' => 
+  array (
+    'new_version' => '1.0.0.0',
+    'info' => 'fis-pc',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/fis-pc',
+    'mailto' => 'jiangshuguangzz@163.com',
+    'mailgroup' => '532205473@qq.com',
   ),
 );

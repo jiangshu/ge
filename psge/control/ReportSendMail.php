@@ -1,9 +1,29 @@
 <?php
-include_once str_replace("\\","/",dirname(__FILE__))."/../conf/config.php";
-include_once str_replace("\\","/",dirname(__FILE__))."/../smarty/config.php";
-include_once str_replace("\\","/",dirname(__FILE__))."/../util/mail/Mail.class.php";
+include_once str_replace("\\","/",dirname(__FILE__))."/../env.php";
+include_once BASE_SRC."util/mail/Mail.class.php";
+include_once BASE_SRC."model/ProjectListModel.class.php";
+
+//$_GET["file"]  = "aaa";
+//$_GET["project"] = "fis-pc";
+//$_GET["version"] = "1.3.9";
 
 $file = $_GET["file"];
-$result = Mail::template_send($file);
-echo $result;
+$project = $_GET["project"];
+$version = $_GET["version"];
 
+$projectList  = new ProjectListM();
+$projectInfo = $projectList->getProject($project);
+$mailTo = array();
+$mailgroup = array();
+
+if(isset($projectInfo["mailto"]) && $projectInfo["mailto"]!=""){
+    $mailTo = explode(";",$projectInfo["mailto"]);
+}
+if(isset($projectInfo["mailgroup"]) && $projectInfo["mailgroup"]!=""){
+    $mailgroup = explode(";",$projectInfo["mailgroup"]);
+}
+
+$mailTo = array_merge($mailTo,$mailgroup);
+$title = $project."-".$version."测试报告";
+$result = Mail::set_send($mailTo,$file,$title);
+echo $result;

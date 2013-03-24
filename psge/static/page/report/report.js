@@ -1,5 +1,5 @@
 (function(){
-    Ge =  {};
+    window.Ge =  {};
     Ge.CreateChart = function (covdata,labels) {
 //        var covdata = ["45","45","45","45"];
 //        var resolved = ["6","12","18","24"];
@@ -268,28 +268,26 @@
         ctx.stroke();
         ctx.closePath();
 
-//    ctx.strokeStyle = "FF0000";
-//    ctx.lineWidth = 2;
-//    ctx.beginPath();
-//
-//    ctx.moveTo(0,220);
-//    ctx.lineTo(80,180);
-//
-//    ctx.moveTo(80,180);
-//    ctx.lineTo(160,60);
-//
-//    ctx.moveTo(160,60);
-//    ctx.lineTo(240,120);
-//
-//    ctx.moveTo(240,120);
-//    ctx.lineTo(320,60);
-//
-//    ctx.moveTo(320,60);
-//    ctx.lineTo(400,120);
-//
-//    ctx.stroke();
-//    ctx.closePath();
+        ctx.strokeStyle = "FF0000";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+
+        ctx.moveTo(0,220);
+        ctx.lineTo(80,180);
+
+        ctx.moveTo(80,180);
+        ctx.lineTo(160,60);
+
+        ctx.moveTo(160,60);
+        ctx.lineTo(240,120);
+
+        ctx.moveTo(240,120);
+        ctx.lineTo(320,60);
+
+        ctx.moveTo(320,60);
+        ctx.lineTo(400,120);
+
+        ctx.stroke();
+        ctx.closePath();
     };
-
-
 })();

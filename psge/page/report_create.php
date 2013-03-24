@@ -19,7 +19,6 @@
 
 <div class="body">
    <div class="page_title">填写测试数据</div>
-    <hr style="margin-left:100px;margin-right: 100px;border: 1px dashed #425dff;margin-bottom:30px"/>
    <div class="report_create">
      <form action="../control/ReportController.php" method="POST" id="projectform" target="_blank">
 <!--       <table align="center"  rules="rows" cellpadding="20" cellspacing="0" border="1" width="800"  frame="vsides">-->
@@ -39,7 +38,7 @@
            <tr>
                <td class="main_title">版本：</td>
                <td>
-                   <input type="text" name="version" class="version"/>
+                   <input type="text" name="version" class="version" id="version"/>
                </td>
            </tr>
 
@@ -150,7 +149,7 @@
 
            <tr>
                <td></td>
-               <td align="right"><input type="submit" class="submit" value="生成测试报告"/></td>
+               <td align="right"><input type="submit" id="submit" class="submit" value="预览测试报告"/></td>
            </tr>
 
        </table>
