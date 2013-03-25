@@ -9,7 +9,7 @@
 if(!defined("BASE_SRC")) define("BASE_SRC",str_replace("\\","/",dirname(__FILE__))."/../");
 if(!defined("BASE_URL")){
     if(strtolower(PHP_OS) == 'linux'){
-        define("BASE_URL","http://10.48.30.87:8088/ge/psge/page/");
+        define("BASE_URL","http://10.48.30.87:8088/ge/psge/");
     }else{
         define("BASE_URL","http://localhost/mobile/ge/psge/");
     }
