@@ -2,8 +2,7 @@
 /**
  * User: jiangshuguang
  */
-include_once str_replace("\\","/",dirname(__FILE__))."/../conf/config.php";
-include_once str_replace("\\","/",dirname(__FILE__))."/../smarty/config.php";
+include_once str_replace("\\","/",dirname(__FILE__))."/../env.php";
 include_once BASE_SRC."/util/phantom/Phantom.class.php";
 $action = $_GET["action"];
 $project = $_GET["project"];

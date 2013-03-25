@@ -6,79 +6,79 @@
       0 => 
       array (
         'module' => 'common',
-        'new' => 29570,
-        'old' => 29130,
-        'change' => 1.51,
+        'new' => 29092,
+        'old' => 29036,
+        'change' => 0.19,
       ),
       1 => 
       array (
         'module' => 'album',
-        'new' => 11964,
-        'old' => 11864,
-        'change' => 0.84,
+        'new' => 11829,
+        'old' => 11896,
+        'change' => -0.56,
       ),
       2 => 
       array (
         'module' => 'favtoolbar',
-        'new' => 11000,
-        'old' => 10964,
-        'change' => 0.33,
+        'new' => 10945,
+        'old' => 11018,
+        'change' => -0.66,
       ),
       3 => 
       array (
         'module' => 'home',
-        'new' => 3175,
-        'old' => 3195,
-        'change' => -0.63,
+        'new' => 3136,
+        'old' => 3205,
+        'change' => -2.15,
       ),
       4 => 
       array (
         'module' => 'manage',
-        'new' => 9713,
-        'old' => 9536,
-        'change' => 1.86,
+        'new' => 9584,
+        'old' => 9640,
+        'change' => -0.58,
       ),
       5 => 
       array (
         'module' => 'message',
-        'new' => 12508,
-        'old' => 12575,
-        'change' => -0.53,
+        'new' => 12441,
+        'old' => 12486,
+        'change' => -0.36,
       ),
       6 => 
       array (
         'module' => 'picture',
-        'new' => 27950,
-        'old' => 29034,
-        'change' => -3.73,
+        'new' => 27667,
+        'old' => 28582,
+        'change' => -3.2,
       ),
       7 => 
       array (
         'module' => 'tag',
-        'new' => 5090,
-        'old' => 5188,
-        'change' => -1.89,
+        'new' => 5034,
+        'old' => 5080,
+        'change' => -0.91,
       ),
       8 => 
       array (
         'module' => 'thirduser',
-        'new' => 11292,
-        'old' => 11149,
-        'change' => 1.28,
+        'new' => 11256,
+        'old' => 11153,
+        'change' => 0.92,
       ),
       9 => 
       array (
         'module' => 'timeline',
-        'new' => 13319,
-        'old' => 13342,
-        'change' => -0.17,
+        'new' => 13184,
+        'old' => 13154,
+        'change' => 0.23,
       ),
       10 => 
       array (
         'module' => 'user',
-        'new' => 12495,
-        'old' => 12652,
-        'change' => -1.24,
+        'new' => 12469,
+        'old' => 12455,
+        'change' => 0.11,
       ),
     ),
   ),

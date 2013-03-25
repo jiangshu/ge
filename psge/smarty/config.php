@@ -11,4 +11,3 @@ $smarty->cache_dir = BASE_PATH.SMARTY_PATH.'cache/';			//定义缓存文件存�
 /*  定义定界符  */
 $smarty->left_delimiter = '{%';
 $smarty->right_delimiter = '%}';
-?>

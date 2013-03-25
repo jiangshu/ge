@@ -36,8 +36,33 @@ $projectList->doAction();
                     <td><?php echo $project?></td>
                     <td><?php echo $data["trace"]?></td>
                     <td><?php echo $data["module"]?></td>
-                    <td><?php echo $data["mailto"]?></td>
-                    <td><?php echo $data["mailgroup"]?></td>
+                    <td>
+                        <?php
+                        $i=1;
+                        $mailto = explode(";",$data["mailto"]);
+                        foreach($mailto as $person){
+                            if($i%2){
+                                echo "<div style='color:#1D6ED8'>$person</div>";
+                            }else{
+                                echo "<div style='color:#A81D0D'>$person</div>";
+                            }
+                            $i++;
+                        }
+                        ?>
+                    <td>
+                        <?php
+                        $i=1;
+                        $mailGroup = explode(";",$data["mailgroup"]);
+                        foreach($mailGroup as $person){
+                            if($i%2){
+                                echo "<div style='color:#1D6ED8'>$person</div>";
+                            }else{
+                                echo "<div style='color:#A81D0D'>$person</div>";
+                            }
+                            $i++;
+                        }
+                    ?>
+                    </td>
                     <td><div class="list_button delete"><?php echo $data["delete"]?></div></td>
                     <td><div class="list_button browser"><?php echo "查看"?></div></td>
                     <td><div class="list_button modify"><?php echo "修改"?></div></td>
@@ -94,8 +119,6 @@ $projectList->doAction();
              $(this).hide();
          });
     });
-
-
 </script>
 
 </body>

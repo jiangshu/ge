@@ -14,16 +14,15 @@ $version = $_GET["version"];
 $projectList  = new ProjectListM();
 $projectInfo = $projectList->getProject($project);
 $mailTo = array();
-$mailgroup = array();
+$mailCC = array();
 
 if(isset($projectInfo["mailto"]) && $projectInfo["mailto"]!=""){
     $mailTo = explode(";",$projectInfo["mailto"]);
 }
 if(isset($projectInfo["mailgroup"]) && $projectInfo["mailgroup"]!=""){
-    $mailgroup = explode(";",$projectInfo["mailgroup"]);
+    $mailCC = explode(";",$projectInfo["mailgroup"]);
 }
 
-$mailTo = array_merge($mailTo,$mailgroup);
 $title = $project."-".$version."测试报告";
-$result = Mail::set_send($mailTo,$file,$title);
+$result = Mail::doSend($mailTo,$mailCC,$file,$title);;
 echo $result;

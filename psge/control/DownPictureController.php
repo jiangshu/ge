@@ -1,5 +1,5 @@
 <?php
-include_once str_replace("\\","/",dirname(__FILE__))."/../smarty/config.php";
+include_once str_replace("\\","/",dirname(__FILE__))."/../env.php";
 if(isset($_GET["filename"])){
 
     $filename=$_GET["filename"];//获取参数

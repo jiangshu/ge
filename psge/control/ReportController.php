@@ -10,7 +10,6 @@ include_once BASE_SRC."util/phantom/Phantom.class.php";
 class Report{
     public static function doCreate(){
         $reportInfo = array();
-        $reportData = array();
         global $smarty;
         if(isset($_POST["project"])){
             $reportInfo["project"] = preg_replace("/\s/","",$_POST["project"]);
@@ -142,10 +141,7 @@ class Report{
         }
 
         $reportData = new ReportData($reportInfo["project"],$reportInfo["version"],$reportInfo);
-
-        $reportData = new ReportData($reportInfo["project"],$reportInfo["version"],$reportInfo);
         $module = $reportData->getData();
-
 
         $report_simple_file = BASE_SRC."report_simple_result/".str_replace("-","_",$module["project"])."_".str_replace("-","_",$module["version"])."_report.html";
         $report_full_file = BASE_SRC."report_full_result/".str_replace("-","_",$module["project"])."_".str_replace("-","_",$module["version"])."_report.html";
@@ -156,8 +152,12 @@ class Report{
          * 简单版的report
          * */
         $module_simple = $module;
-        $module_simple["data"]["testdata"]["cov"]["versions"] = json_decode($module_simple["data"]["testdata"]["cov"]["versions"]);
-        $module_simple["data"]["testdata"]["cov"]["covs"] = json_decode($module_simple["data"]["testdata"]["cov"]["covs"]);
+        if(isset($module_simple["data"]["testdata"]["cov"]["versions"])){
+            $module_simple["data"]["testdata"]["cov"]["versions"] = json_decode($module_simple["data"]["testdata"]["cov"]["versions"]);
+        }
+        if(isset($module_simple["data"]["testdata"]["cov"]["covs"])){
+            $module_simple["data"]["testdata"]["cov"]["covs"] = json_decode($module_simple["data"]["testdata"]["cov"]["covs"]);
+        }
         $smarty->assign("module", $module_simple);
         $smarty->assign("report_full_url",$report_full_url);
         $report_content = $smarty->fetch("page/report/simple.tpl");

@@ -4,13 +4,12 @@
  * Date: 13-2-18
  * Time: 下午2:09
  */
-
-include_once str_replace("\\","/",dirname(__FILE__))."/DataBase.php";
-include_once str_replace("\\","/",dirname(__FILE__))."/../conf/config.php";
-include_once str_replace("\\","/",dirname(__FILE__))."/parse/ParseCov.php";
-include_once str_replace("\\","/",dirname(__FILE__))."/parse/ParseDiff.php";
-include_once str_replace("\\","/",dirname(__FILE__))."/TraceModel.class.php";
-include_once str_replace("\\","/",dirname(__FILE__))."/../util/File.class.php";
+include_once str_replace("\\","/",dirname(__FILE__))."/../env.php";
+include_once BASE_SRC."model/DataBase.php";
+include_once BASE_SRC."model/parse/ParseCov.php";
+include_once BASE_SRC."model/parse/ParseDiff.php";
+include_once BASE_SRC."model/TraceModel.class.php";
+include_once BASE_SRC."util/File.class.php";
 include_once BASE_SRC."model/ProjectListModel.class.php";
 
 class ReportData{
@@ -261,7 +260,6 @@ class ReportData{
                     preg_match("/【.*】/",$bugItem["summary"],$key);
                     if(count($key)>0){
                         $key = str_replace("】","",str_replace("【","",$key[0]));
-                        $i = 0;
                         for($i=0;$i<$len;$i++){
                             if(preg_match("/$key/",$keys[$i])){
                                 break;

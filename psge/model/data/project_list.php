@@ -5,35 +5,8 @@
     'info' => 'fis-basic',
     'trace' => 'PUBLICGE',
     'module' => 'public/ge/gaea/fis-basic',
-    'mailto' => 'leizhixing@baidu.com',
-    'mailgroup' => '',
-  ),
-  'fis-core' => 
-  array (
-    'new_version' => '1.0.0.0',
-    'info' => 'fis-core',
-    'trace' => 'PUBLICGE',
-    'module' => 'public/ge/gaea/fis-core',
-    'mailto' => 'leizhixing@baidu.com',
-    'mailgroup' => '',
-  ),
-  'fis-mobile' => 
-  array (
-    'new_version' => '1.0.0.0',
-    'info' => 'fis-mobile',
-    'trace' => 'PUBLICGE',
-    'module' => 'public/ge/gaea/fis-phone',
-    'mailto' => 'shenlixia01@baidu.com',
-    'mailgroup' => 'ge-qa@baidu.com',
-  ),
-  'fis-webapp' => 
-  array (
-    'new_version' => '1.0.0.0',
-    'info' => 'fis-webapp',
-    'trace' => 'PUBLICGE',
-    'module' => 'public/ge/gaea/webapp',
-    'mailto' => 'leizhixing@baidu.com',
-    'mailgroup' => '',
+    'mailto' => 'leizhixing@baidu.com;lanyu@baidu.com',
+    'mailgroup' => 'oak@baidu.com;liqiang01@baidu.com',
   ),
   'fis-pc2' => 
   array (
@@ -41,8 +14,35 @@
     'info' => 'fis-pc2',
     'trace' => 'PUBLICGE',
     'module' => 'public/ge/gaea/pc2',
-    'mailto' => 'shenlixia01@baidu.com',
-    'mailgroup' => 'ge-qa@baidu.com',
+    'mailto' => 'leizhixing@baidu.com;lanyu@baidu.com',
+    'mailgroup' => 'oak@baidu.com;liqiang01@baidu.com',
+  ),
+  'fis-webapp' => 
+  array (
+    'new_version' => '1.0.0.0',
+    'info' => 'fis-webapp',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/webapp',
+    'mailto' => 'leizhixing@baidu.com;lanyu@baidu.com',
+    'mailgroup' => 'oak@baidu.com;liqiang01@baidu.com',
+  ),
+  'fis-core' => 
+  array (
+    'new_version' => '1.0.0.0',
+    'info' => 'fis-core',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/fis-core',
+    'mailto' => 'leizhixing@baidu.com;lanyu@baidu.com',
+    'mailgroup' => 'oak@baidu.com;liqiang01@baidu.com',
+  ),
+  'fis-mobile' => 
+  array (
+    'new_version' => '1.0.0.0',
+    'info' => 'fis-mobile',
+    'trace' => 'PUBLICGE',
+    'module' => 'public/ge/gaea/fis-phone',
+    'mailto' => 'leizhixing@baidu.com;lanyu@baidu.com',
+    'mailgroup' => 'oak@baidu.com;liqiang01@baidu.com',
   ),
   'fis-pc' => 
   array (
@@ -50,7 +50,7 @@
     'info' => 'fis-pc',
     'trace' => 'PUBLICGE',
     'module' => 'public/ge/gaea/fis-pc',
-    'mailto' => 'jiangshuguangzz@163.com',
-    'mailgroup' => '532205473@qq.com',
+    'mailto' => 'jiangshuguang@baidu.com',
+    'mailgroup' => 'ge-qa@baidu.com',
   ),
 );
