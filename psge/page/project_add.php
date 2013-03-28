@@ -22,7 +22,7 @@
             <table align="center" width="500px" cellpadding="5px">
                 <tr >
                     <td width="25%">项目名称：</td>
-                    <td><input id="project_name" name="project_name" class="name" type="text"/></td>
+                    <td><input id="project_name" name="project_name" class="name" type="text" value="fis-exmple"/></td>
                 </tr>
                 <tr>
                     <td>最新版本：</td>
@@ -41,8 +41,8 @@
                     <td><input type="text" name="module" id="module"   value="public/ge/gaea"></td>
                 </tr>
                 <tr>
-                    <td>CI机器IP：</td>
-                    <td><input type="text" name="CiIp" id="CiIp"   value="10.48.30.87"></td>
+                    <td>CI IP及端口：</td>
+                    <td><input type="text" name="CiIp" id="CiIp"   value="10.48.30.87:8088"></td>
                 </tr>
                 <tr>
                     <td>
@@ -51,16 +51,16 @@
                     <td>
                         <table>
                             <tr><td>收件人：</td></tr>
-                            <tr><td><input type="text" name="mailto" id="mailTo" class="mail"></td></tr>
+                            <tr><td><input type="text" name="mailto" id="mailTo" class="mail" value="jiangshuguang@baidu.com"></td></tr>
                             <tr><td>抄送：</td></tr>
-                            <tr><td><input type="text" name="mailgroup" id="mailGroup" class="mail"></td></tr>
+                            <tr><td><input type="text" name="mailgroup" id="mailGroup" class="mail" value="ge-qa@baidu.com"></td></tr>
                         </table>
                     </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td align="right">
-                        <input class="ge_button" type="submit" class="submit" value="提交">
+                        <input class="ge_button" type="submit" id="submit" value="提交">
                     </td>
                 </tr>
             </table>

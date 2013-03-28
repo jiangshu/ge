@@ -54,9 +54,9 @@ $(function(){
         },
         'calendarOptions': {
             'weekStart': 'sun',
-            'initDate': new Date(),
-            'highlightDates': [new Date('2012/05/06'), new Date('2010/09/12'), {start: new Date('2012/05/15'), end: new Date('2012/06/05')}, new Date('2012/06/30')],
-            'disabledDates': [{end: new Date('2012/05/05')}, new Date('2012/06/25')]
+            'initDate': new Date()
+//            'highlightDates': [new Date('2012/05/06'), new Date('2010/09/12'), {start: new Date('2012/05/15'), end: new Date('2012/06/05')}, new Date('2012/06/30')],
+//            'disabledDates': [{end: new Date('2012/05/05')}, new Date('2012/06/25')]
         }
     });
 
@@ -67,9 +67,9 @@ $(function(){
         },
         'calendarOptions': {
             'weekStart': 'sun',
-            'initDate': new Date(),
-            'highlightDates': [new Date('2012/05/06'), new Date('2010/09/12'), {start: new Date('2012/05/15'), end: new Date('2012/06/05')}, new Date('2012/06/30')],
-            'disabledDates': [{end: new Date('2012/05/05')}, new Date('2012/06/25')]
+            'initDate': new Date()
+//            'highlightDates': [new Date('2012/05/06'), new Date('2010/09/12'), {start: new Date('2012/05/15'), end: new Date('2012/06/05')}, new Date('2012/06/30')],
+//            'disabledDates': [{end: new Date('2012/05/05')}, new Date('2012/06/25')]
         }
     });
 
@@ -79,11 +79,22 @@ $(function(){
              $(".report_create #version").one("mousemove",function(){
                  $("#tip").remove();
              });
-        }else{
+        }else if($(".report_create #start_time").attr("value")== ""){
+             Ge.tip($(".report_create #start_time"),"起始时间不能为空");
+             $(".report_create #start_time").one("mousemove",function(){
+                 $("#tip").remove();
+             });
+         }else if($(".report_create #end_time").attr("value") == ""){
+             Ge.tip($(".report_create #end_time"),"结束时间不能为空");
+             $(".report_create #end_time").one("mousemove",function(){
+                 $("#tip").remove();
+             });
+         }else{
+             /*
+              *判断起止时间是否合法
+              * */
             return true;
         }
         return false;
     });
-
-
 });

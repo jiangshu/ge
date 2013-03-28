@@ -20,6 +20,7 @@ class ProjectList{
             $module = $_POST["module"];
             $mailto = $_POST["mailto"];
             $mailgroup = $_POST["mailgroup"];
+            $ip_port = $_POST["CiIp"];
 
             $merge_data = array(
                 $project_name => array(
@@ -29,6 +30,7 @@ class ProjectList{
                     "module" => $module,
                     "mailto" => $mailto,
                     "mailgroup" => $mailgroup,
+                    "ip_port" => $ip_port,
                 )
             );
             $this->projectListM ->mergeData($merge_data,$project_name);
@@ -66,4 +68,4 @@ class ProjectList{
 
 
 //$projectList  = new ProjectList();
-//var_dump($projectList->getList());
+//var_dump($projectList->getSimpleList());

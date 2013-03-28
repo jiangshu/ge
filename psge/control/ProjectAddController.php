@@ -7,6 +7,7 @@ $version = $_POST["version"];
 $info = $_POST["info"];
 $space = $_POST["space"];
 $module = $_POST["module"];
+$ip_port = $_POST["CiIp"];
 $mailto = $_POST["mailto"];
 $mailgroup = $_POST["mailgroup"];
 
@@ -15,6 +16,7 @@ $merge_data = array(
         "new_version"=> $version,
         "info" => $info,
         "trace" => $space,
+        "ip_port" =>$ip_port,
         "module" => $module,
         "mailto" => $mailto,
         "mailgroup" => $mailgroup,
