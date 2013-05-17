@@ -7,7 +7,7 @@ class ProjectListM{
     private $project_list_file;
     private $prject_list_data;
     public function __construct(){
-        $this->project_list_file = BASE_SRC."model/data/project_list.php";
+        $this->project_list_file = PROJECT_LIST_FILE;
         if(file_exists($this->project_list_file)){
             $this->prject_list_data = include($this->project_list_file);
         }else{
