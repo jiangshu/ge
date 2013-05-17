@@ -1,0 +1,116 @@
+
+
+
+.report_create{
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica;
+    font-size:22px;
+    padding-top:25px;
+    padding-bottom:25px;
+}
+
+.main_title{
+    background: url("./title.gif") no-repeat 10px center;
+    background-size: 20px 20px;
+    padding-left:35px;
+    font-size:16px;
+    color: #590000;
+    /*font-weight: bold;*/
+}
+
+.main_content{
+    margin-bottom:30px;
+    margin-left:50px;
+    margin-top:10px;
+}
+
+input{
+    height:25px;
+    border-radius: 3px;
+    border: 1px solid #24a5ff;
+    font-size:14px;
+}
+
+select{
+    height:25px;
+    border-radius: 3px;
+    border: 1px solid #24a5ff;
+    font-size:14px;
+    width:155px;
+}
+
+textarea{
+    border-radius: 5px;
+    border: 1px solid #24a5ff;
+    color: #8b8b8b;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+
+
+table tr{
+    /*border: rgb(214, 214, 214) 1px dotted;*/
+    /*border-left: rgb(0,0,0) 1px dotted;*/
+    /*border-bottom: rgb(0,0,0) 1px dotted;*/
+}
+
+table tr table tr{
+    border: rgb(223, 165, 45) 1px dotted;
+}
+
+.sub{
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background: #ff2749;
+    border-radius: 10px;
+    line-height: 20px;
+    text-align: center;
+    font-size:18px;
+    color:#fff;
+    cursor:pointer;
+}
+.sub:hover{
+    background: #c51c3b;
+}
+
+.plus{
+    width:20px;
+    height:20px;
+    background: #5e91ff;
+    border-radius: 10px;
+    line-height: 20px;
+    text-align: center;
+    font-size:18px;
+    color:#fff;
+    cursor:pointer;
+    float:right;
+    margin-right:32px;
+}
+
+.plus:hover{
+    background: #4161ad;
+}
+
+.submit{
+    width:100px;
+    height:30px;
+    padding: 0 8px 0 8px;
+    background: #0c08ff;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    color:#fff;
+    font-size:14px;
+    font-weight: bold;
+    cursor: pointer;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#2185ff),to(#1558aa));
+}
+
+.submit:hover{
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#1558aa),to(#2185ff));
+}
