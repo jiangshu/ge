@@ -45,8 +45,9 @@ $projectList->doAction();
                         foreach($mailto as $person){
                             if($i%2){
                                 echo "<div style='color:#1751A1'>$person</div>";
-                                echo "<hr style='margin-right:20px;border:1px dashed #AAAAAA;'/>";
+
                             }else{
+                                echo "<hr style='margin-right:20px;border:1px dashed #AAAAAA;'/>";
                                 echo "<div style='color:#A81D0D'>$person</div>";
                             }
                             $i++;
@@ -59,8 +60,8 @@ $projectList->doAction();
                         foreach($mailGroup as $person){
                             if($i%2){
                                 echo "<div style='color:#1751A1'>$person</div>";
-                                echo "<hr style='margin-right:20px;border:1px dashed #AAAAAA;'/>";
                             }else{
+                                echo "<hr style='margin-right:20px;border:1px dashed #AAAAAA;'/>";
                                 echo "<div style='color:#A81D0D'>$person</div>";
                             }
                             $i++;

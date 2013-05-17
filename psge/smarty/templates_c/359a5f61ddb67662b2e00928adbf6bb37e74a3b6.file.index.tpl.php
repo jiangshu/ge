@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2013-03-25 09:18:53
+<?php /* Smarty version Smarty-3.1.12, created on 2013-05-08 17:58:43
          compiled from "E:\test_dir\ge\psge\view\page\report\index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:172895150086d442393-18439883%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '359a5f61ddb67662b2e00928adbf6bb37e74a3b6' => 
     array (
       0 => 'E:\\test_dir\\ge\\psge\\view\\page\\report\\index.tpl',
-      1 => 1364193220,
+      1 => 1367557015,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.12',
+  'unifunc' => 'content_5150086d71f3f8_47828650',
   'variables' => 
   array (
     'module' => 0,
@@ -25,8 +27,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'report_simple_file' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.12',
-  'unifunc' => 'content_5150086d71f3f8_47828650',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_5150086d71f3f8_47828650')) {function content_5150086d71f3f8_47828650($_smarty_tpl) {?><!doctype html>
 <html>
@@ -199,7 +199,7 @@ _dev_diff_slow/test/util/diff/test_compiletime.php?product=<?php echo $_smarty_t
                 <div class="coverage">
                     <script type="text/javascript">
                         <?php if ($_smarty_tpl->tpl_vars['module']->value['data']['testdata']['cov']){?>
-                        Ge.CreateChart(<?php echo $_smarty_tpl->tpl_vars['datas']->value['covs'];?>
+                             Ge.CreateChart(<?php echo $_smarty_tpl->tpl_vars['datas']->value['covs'];?>
 ,<?php echo $_smarty_tpl->tpl_vars['datas']->value['versions'];?>
 );
                         <?php }?>

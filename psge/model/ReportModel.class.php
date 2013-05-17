@@ -120,7 +120,7 @@ class ReportData{
 
         if($result["iscov"]){
             $elseData["iscov"] = "1";
-            $elseData["covResult"] = $result["diffResult"];
+            $elseData["covResult"] = $result["covResult"];
         }else{
             $elseData["iscov"] = "0";
         }

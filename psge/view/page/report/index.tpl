@@ -137,7 +137,7 @@
                 <div class="coverage">
                     <script type="text/javascript">
                         {%if $module.data.testdata.cov%}
-                        Ge.CreateChart({%$datas.covs%},{%$datas.versions%});
+                             Ge.CreateChart({%$datas.covs%},{%$datas.versions%});
                         {%/if%}
                     </script>
                 </div>

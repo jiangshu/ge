@@ -156,5 +156,8 @@
      </form>
    </div>
 </div>
+<div class="switch">
+    <a href="report_create_simple.php">切换到简单版</a>
+</div>
 </body>
 </html>
