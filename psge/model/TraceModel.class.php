@@ -44,6 +44,7 @@ class Trace{
                         "status"=>Trace::getString($data["status"]),
                         "version"=>Trace::getString($data["Build"]),
 //                        "fixVersion"=>$data["Fixed Build"],
+                        "resolution"=>isset($data["Resolution"])?Trace::getString($data["Resolution"]):"none",
                         "fixVersion"=>"future",
                         "timestamp"=>Trace::getTime($data["timeStamp"]),
                         "latesthistorytimestamp"=>Trace::getTime($data["latestHistory.timeStamp"])
@@ -78,3 +79,7 @@ class Trace{
         }
     }
 }
+//Trace::get($size=30,$space="PUBLICGE",$module="public/ge/gaea/fis-pc");
+//var_dump(Trace::get($size=300,$space="PUBLICGE",$module="public/ge/gaea/fis-pc"));
+
+
