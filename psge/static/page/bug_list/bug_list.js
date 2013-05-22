@@ -11,14 +11,16 @@ $(function(){
            '<td width="10%">RD</td>' +
            '<td width="10%">QA</td>' +
            '</tr>',
-           index = 1;
+           index = 1,
+           detail = "";
 
       $.each(data,function(key,bugItem){
+
           html+= ""+
               "<tr>" +
               "<td>" +index+
               "</td>" +
-              "<td>" +bugItem.summary+
+              "<td>" +(bugItem.summary)+
               "</td>" +
               "<td>" +bugItem.detail+
               "</td>" +
@@ -31,6 +33,7 @@ $(function(){
               "</tr>";
           index++;
       });
+      console.log(html);
        return html;
   }
 
