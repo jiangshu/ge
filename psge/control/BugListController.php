@@ -32,10 +32,8 @@ class BugListController{
 //                if($count<40 || $count>41){
 //                    continue;
 //                }
-                  $summary = $bugItem["summary"];
-                  $summary = preg_replace("/(script|style)/i","",$summary);
                   $bugList[] = array(
-                      "summary"=>$summary,
+                      "summary"=>htmlspecialchars($bugItem["summary"]),
                       "detail"=>$bugItem["detail"],
                       "assignedto"=>$bugItem["assignedto"] =="none"?$bugItem["resolveBy"]:$bugItem["assignedto"],
                       "loggedby"=>$bugItem["loggedby"],
