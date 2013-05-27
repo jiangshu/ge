@@ -131,17 +131,16 @@ class ReportSimpleData{
     }
 
     private function getAutoTest(){
-        $covList = $this->getCovList();
-        $versions = array();
-        $covs = array();
-        foreach($covList as $version=>$cov){
-            array_push($versions,$version);
-            array_push($covs,$cov);
-        }
+
         if($this->reportInfo["isAutoTest"]){
+            $covList = $this->getCovList();
+            $versions = array();
+            $covs = array();
+            foreach($covList as $version=>$cov){
+                array_push($versions,$version);
+                array_push($covs,$cov);
+            }
             return array(
-//                "covs"=>array(28,34,63,58),
-//                "versions"=>array("1.3.4","1.3.5","1.3.6","1.3.7"),
                 "covs"=>$covs,
                 "versions"=>$versions,
                 "content"=>$this->reportInfo["autoContent"],

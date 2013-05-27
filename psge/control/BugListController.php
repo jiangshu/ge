@@ -39,20 +39,8 @@ class BugListController{
                       "loggedby"=>$bugItem["loggedby"],
                       "resolution"=>$bugItem["resolution"],
                   );
-//                if($count ==39 || $count==40){
-//                    var_dump(
-//                        array(
-//                            "summary"=>$bugItem["summary"],
-//                            "detail"=>$bugItem["detail"],
-//                            "assignedto"=>$bugItem["assignedto"] =="none"?$bugItem["resolveBy"]:$bugItem["assignedto"],
-//                            "loggedby"=>$bugItem["loggedby"],
-//                            "resolution"=>$bugItem["resolution"],
-//                        )
-//                    );
-//                }
             }
         }
-//        var_dump("count:"+$count);
         return $bugList;
     }
 }

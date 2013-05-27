@@ -177,9 +177,9 @@
                                 {%$tmp=0%}
                                 {%foreach $datas.bugs as $bug%}
                                 {%if $tmp gt $bug%}
-                                    <td style="color:red">{%$bug%}↓</td>
+                                    <td>{%$bug%}↓</td>
                                 {%else%}
-                                    <td>{%$bug%}↑</td>
+                                    <td style="color:red">{%$bug%}↑</td>
                                 {%/if%}
                                 {%$tmp=$bug%}
                                 {%/foreach%}

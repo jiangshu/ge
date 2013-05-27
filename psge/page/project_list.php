@@ -39,33 +39,32 @@ $projectList->doAction();
                     <td><?php echo $data["module"]?></td>
                     <td><?php echo $data["ip_port"]?></td>
                     <td>
-                        <?php
-                        $i=1;
+                    <?php
+                        $i=0;
                         $mailto = explode(";",$data["mailto"]);
-                        foreach($mailto as $person){
-                            if($i%2){
+                        foreach($mailto as $key =>$person){
+                            if(!$i){
                                 echo "<div style='color:#1751A1'>$person</div>";
-
                             }else{
                                 echo "<hr style='margin-right:20px;border:1px dashed #AAAAAA;'/>";
                                 echo "<div style='color:#A81D0D'>$person</div>";
                             }
-                            $i++;
+                            $i=1;
                         }
-                        ?>
+                     ?>
                     <td>
-                        <?php
-                        $i=1;
+                    <?php
+                        $i=0;
                         $mailGroup = explode(";",$data["mailgroup"]);
                         foreach($mailGroup as $person){
-                            if($i%2){
+                            if(!$i){
                                 echo "<div style='color:#1751A1'>$person</div>";
                             }else{
                                 echo "<hr style='margin-right:20px;border:1px dashed #AAAAAA;'/>";
                                 echo "<div style='color:#A81D0D'>$person</div>";
                             }
-                            $i++;
-                        }
+                            $i=1;
+                    }
                     ?>
                     </td>
                     <td><div class="list_button delete"><?php echo $data["delete"]?></div></td>
