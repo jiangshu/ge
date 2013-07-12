@@ -143,8 +143,8 @@ class Report{
         $reportData = new ReportData($reportInfo["project"],$reportInfo["version"],$reportInfo);
         $module = $reportData->getData();
 
-        $report_simple_file = BASE_SRC."report_simple_result/".str_replace("-","_",$module["project"])."_".str_replace("-","_",$module["version"])."_report.html";
-        $report_full_file = BASE_SRC."report_full_result/".str_replace("-","_",$module["project"])."_".str_replace("-","_",$module["version"])."_report.html";
+        $report_simple_file = REPORT_SIMPLE_PATH.str_replace("-","_",$module["project"])."_".str_replace("-","_",$module["version"])."_report.html";
+        $report_full_file = REPORT_FULL_PATH.str_replace("-","_",$module["project"])."_".str_replace("-","_",$module["version"])."_report.html";
         $report_full_url = BASE_URL."/report_full_result/".str_replace("-","_",$module["project"])."_".str_replace("-","_",$module["version"])."_report.html";
 
 

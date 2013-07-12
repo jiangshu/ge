@@ -160,7 +160,10 @@ class ReportData{
     public function getCovData(){
          if($this->result["iscov"]){
              $cov_url = Config::fis_url."cov.php?project=".$this->project; //CI机器获取coverage数据的url
-              $covDatas = include COV_FILE;
+             $covDatas = array();
+             if(file_exists(COV_FILE)){
+                 $covDatas = include COV_FILE;
+             }
               if(array_key_exists($this->project,$covDatas)){
                   if(array_key_exists($this->version,$covDatas[$this->project])){
                       $covDatas[$this->project][$this->version] = ParseCov::getCov($cov_url);
@@ -177,7 +180,7 @@ class ReportData{
                   ));
               }
 
-              GEFile::saveFile($covDatas,BASE_SRC."/model/data/cov.php");
+              GEFile::saveFile($covDatas,COV_FILE);
 
              $versions = array();
              $covs = array();
@@ -202,7 +205,10 @@ class ReportData{
     * */
     public function getDiffData(){
         if($this->result["isdiff"]){
-            $diffDatas = include DIFF_FILE;
+            $diffDatas = array();
+            if(file_exists(DIFF_FILE)){
+                $diffDatas = include DIFF_FILE;
+            }
             $diff_url = Config::fis_url."/diff.php?project=".$this->project;
             $curDiffData = ParseDiff::getDiff($diff_url);
             if(array_key_exists($this->project,$diffDatas)){
@@ -213,7 +219,7 @@ class ReportData{
                     $this->project =>$curDiffData
                 ));
             }
-            GEFile::saveFile($diffDatas,BASE_SRC."/model/data/diff.php");
+            GEFile::saveFile($diffDatas,DIFF_FILE);
             return $curDiffData;
         }else{
             return 0;

@@ -20,7 +20,7 @@ $(function(){
               "<tr>" +
               "<td>" +index+
               "</td>" +
-              "<td>" +(bugItem.summary)+
+              "<td>" +bugItem.summary+
               "</td>" +
               "<td>" +bugItem.detail+
               "</td>" +
